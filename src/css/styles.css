@@ -4,7 +4,8 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
+@import url('./pixabay.css');
+@import url('./loader.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -13,11 +14,76 @@
   font-weight: 400;
 
   color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+/* .markup-info{
+  display: flex;
+  flex-wrap: wrap
+}
+.item-list{
+  display: flex;
+  flex-wrap:
+} */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container{
+  padding-top: 0;
+  width: 100%;
+  max-width: 1190px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px ;
+}
+.item-list{
+  height: 200px;
+  width: 360px;
+  border: 1px solid #808080;
+}
+.markup-info{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+}
+.item-list-img{
+  height: 152px;
+  width: 360px;
+}
+.item-list-title{
+  text-align: center;
+  font-family: font-family;
+font-weight: 600;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: 0.04em;
+color: #2e2f42;
+}
+.item-list-text{
+  text-align: center;
+  font-family: font-family;
+font-weight: 400;
+font-size: 12px;
+line-height: 200%;
+letter-spacing: 0.04em;
+color: #2e2f42;
+}
+.search-form{
+  display: flex;
+  justify-content: center;
+  gap: 8px; margin-top: 36px;
 }
