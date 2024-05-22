@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     
     <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-540573e6.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-09d7c26e.js">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-b10be061.css">
   </head>
   <body>
     <section class="section-search">
@@ -16,7 +18,7 @@
        <form class="search-form js-search-form">
           <div class="search">
             <input type="text" class="input"   name="searchKeyword" placeholder="Search images..." id="datetime-picker" />
-            <button type="submit" class="startBtn">Search</button>
+            <button type="submit" class="startBtn s-submit-btn">Search</button>
           </div>
         </form>
       </div>
@@ -25,7 +27,12 @@
         <p class="loader-text">Loading image, please wait...</p>
       </div>
     </section>
-    <div class="container"><ul class="list js-gallery"></ul></div>
+    <div class="container">
+      <ul class="list js-gallery"></ul>
+      <div class="load-more-wrap">
+        <button class="gallery__load-more-btn btn js-load-more-btn is-hidden">Load more</button>
+      </div>
+    </div>
     
   </body>
   </html>
