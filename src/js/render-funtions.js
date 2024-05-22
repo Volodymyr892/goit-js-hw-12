@@ -12,7 +12,7 @@ export const createMarkupItem = images => {
             comments,
             downloads,
         }) => { return`
-            <li class="item-list">
+            <li class="item-list gallery__item">
         <a href="${largeImageURL}" class="item-list-link">
             <img class="item-list-img"  height="152"
             width="300" src="${webformatURL}" alt="${tags}">

@@ -6,6 +6,7 @@
 */
 @import url('./pixabay.css');
 @import url('./loader.css');
+@import url('./load-more.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -86,4 +87,9 @@ color: #2e2f42;
   display: flex;
   justify-content: center;
   gap: 8px; margin-top: 36px;
+}
+.gallery__item {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
 }
