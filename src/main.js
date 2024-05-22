@@ -1,11 +1,14 @@
 import { fetchPhotosByQuery } from "./js/pixabay-api";
 import { createMarkupItem } from "./js/render-funtions";
 
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 
-// import SimpleLightbox from 'simplelightbimport iziToast from "izitoast";
-// import "izitoast/dist/css/iziToast.min.css";ox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
+
 
 const searchFormEl = document.querySelector('.js-search-form');
 const galleryEl = document.querySelector('.js-gallery');
@@ -21,7 +24,7 @@ function onSearchFormSubmit(event){
     
     event.preventDefault();
     const searchQuery = event.target.elements.searchKeyword.value.trim();
-   
+    
     if (searchQuery === '') {
         galleryEl.innerHTML = '';
         event.target.reset();
