@@ -1,4 +1,4 @@
-import { fetchPhotosByQuery } from "./js/pixabay-api";
+import { fetchPhotosByQuery, PER_PAGE } from "./js/pixabay-api";
 import { createMarkupItem } from "./js/render-funtions";
 
 import iziToast from "izitoast";
@@ -77,18 +77,19 @@ const onSearchFormSubmit = async event =>{
         loadMoreBtnEl.classList.remove('is-hidden');
       }
  } catch (error){
-        searchFormSubmitBtnEl.classList.add('is-disabled')
-        loaderEl.classList.add('is-hidden');
-        iziToast.error({
-          message: 'Search params is not valid!',
-          position: 'topRight',
-        });
-        form.reset();
-        return;
-      };
-    
-      form.reset();
-    };
+   searchFormSubmitBtnEl.classList.add('is-disabled')
+   loaderEl.classList.add('is-hidden');
+   iziToast.error({
+     message: 'Search params is not valid!',
+     position: 'topRight',
+    });
+    form.reset();
+    console.log("🚀 ~ onSearchFormSubmit ~ error:", error)
+    return;
+  };
+  
+  form.reset();
+};
     searchFormEl.addEventListener('submit', onSearchFormSubmit);
     const smoothScrollOnLoadMore = () => {
       const lastPhoto = document.querySelector('.gallery__item:last-child');
